@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace StatePattern
 {
-    class StateDelete
+    class StateDelete : FileState
     {
+        public override void close(File file)
+        {
+            Console.WriteLine("Closed");
+            File.SetClose;
+        }
+
+        public override void delete(File file)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void open(File file)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

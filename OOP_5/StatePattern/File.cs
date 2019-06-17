@@ -8,18 +8,42 @@ namespace StatePattern
 {
     class File
     {
-        private string Status = null;
+        FileState State = new StateClose();
+        private string FileName;
 
+        public File(File file)
+        {
+            FileName = file;
+        }
+   
         public void SetOpen()
         {
-            private File file = new File();
-            File.Status = Open
+            switch (State)
+            {
+                case State = StateOpen:
+                    Console.WriteLine('unable to open file 'this.FileName' in current state 'this.State );
+                    break;
+
+                case State = StateDelete:
+                    Console.WriteLine('unable to open file 'this.FileName' in current state 'this.State);
+                    break;
+
+                case State = StateClose:
+                    State.SetOpen(this);
+                    Console.WriteLine('changed State from 'this.FileName' to' this.State);
+            }
+            
         }
 
-        public void Setclose()
+        public void SetClose()
         {
-            private File file = new File();
+            Status = "Close";
         }
-        
+
+        public void SetDelete()
+        {
+            Status = "Delete";
+        }
+
     }
 }
