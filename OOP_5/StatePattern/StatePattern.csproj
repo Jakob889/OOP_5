@@ -42,8 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StateClose.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="FileState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateDelete.cs" />
+    <Compile Include="StateOpen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
