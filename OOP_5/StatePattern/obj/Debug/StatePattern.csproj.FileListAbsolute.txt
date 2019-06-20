@@ -1,0 +1,7 @@
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\obj\Debug\StatePattern.csprojResolveAssemblyReference.cache
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\obj\Debug\StatePattern.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\bin\Debug\StatePattern.exe.config
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\bin\Debug\StatePattern.exe
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\bin\Debug\StatePattern.pdb
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\obj\Debug\StatePattern.exe
+C:\Users\Jakob\source\repos\OOP_5\OOP_5\StatePattern\obj\Debug\StatePattern.pdb

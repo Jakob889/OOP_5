@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace UMLtoC
 {
-    class Number
+    public class Number
     {
-        public double n;
+        private double n;
 
-        public void (double number)
-         {
-}
+        public Number(double number)
+        {
+            n = number;
+        }
 
         public double GetNumber()
         {
-
+            return n;
         }
-}
+    }
 }

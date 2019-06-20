@@ -6,43 +6,42 @@ using System.Threading.Tasks;
 
 namespace StatePattern
 {
-    class File
+    public class File
     {
-        FileState State = new StateClose();
-        private string FileName;
+        public IFileState State { get; set; }
+        
+        public string FileName { get; set; }
 
-        public File(File file)
+        public File(string newFileName)
         {
-            FileName = file;
+            FileName = newFileName;
+            State = new StateClose();
         }
-   
-        public void SetOpen()
+        
+        public void open()
         {
-            switch (State)
-            {
-                case State = StateOpen:
-                    Console.WriteLine('unable to open file 'this.FileName' in current state 'this.State );
-                    break;
-
-                case State = StateDelete:
-                    Console.WriteLine('unable to open file 'this.FileName' in current state 'this.State);
-                    break;
-
-                case State = StateClose:
-                    State.SetOpen(this);
-                    Console.WriteLine('changed State from 'this.FileName' to' this.State);
-            }
-            
+           State.open(this);
         }
 
-        public void SetClose()
+        public void close()
         {
-            Status = "Close";
+            State.close(this);
         }
 
-        public void SetDelete()
+        public void delete()
         {
-            Status = "Delete";
+            State.delete(this);
+        }
+
+        public void getState()
+        {
+            Console.WriteLine($"Current state of '{FileName}' = {State.GetType().Name}");
+        }
+
+        public void changeState(IFileState newState)
+        {
+            Console.WriteLine($"Change State from '{State.GetType().Name}' to '{newState.GetType().Name}'");
+            State = newState;
         }
 
     }

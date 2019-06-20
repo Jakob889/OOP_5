@@ -6,11 +6,25 @@ using System.Threading.Tasks;
 
 namespace UMLtoC
 {
-    class Master:ICanCreateSum
+    public class Master:ICanCreateSum
     {
+        private List<Number> numbers = new List<Number>();
+
         public void AddNumber(Number number)
         {
+            numbers.Add(number);
+        }
 
+        public int CreateSum()
+        {
+            var sum = 0d;
+
+            foreach (var number in numbers)
+            {
+                sum += number.GetNumber();
+            }
+
+            return (int)sum;
         }
     }
 }

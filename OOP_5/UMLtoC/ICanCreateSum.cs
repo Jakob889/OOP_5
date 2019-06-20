@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace UMLtoC
 {
-    interface ICanCreateSum
+    public interface ICanCreateSum
     {
-        public int CreateSum()
-        {
-            Console.WriteLine("summe ist" Number.n + number);
-        }
-    
+        int CreateSum();
+        
     }
 }

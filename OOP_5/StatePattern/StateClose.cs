@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace StatePattern
 {
-    class StateClose : FileState
+    public class StateClose : IFileState
     {
-        public override void close(File file)
+        public void close(File file)
         {
-            Console.WriteLine("Closed");
-            File.SetClose;
+            Console.WriteLine($"unable to close file '{file.FileName}' in current state '{GetType().Name}'");
         }
 
-        public override void delete(File file)
+        public  void delete(File file)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Deleting file {file.FileName}");
+            file.changeState(new StateDelete());
         }
 
-        public override void open(File file)
+        public  void open(File file)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Opening file {file.FileName}");
+            file.changeState(new StateOpen());
         }
     }
 }
